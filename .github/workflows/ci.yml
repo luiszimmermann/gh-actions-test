@@ -1,0 +1,21 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout 
+      uses: actions/checkout@v1
+
+    - name: Cache Text
+      uses: actions/cache@v1
+      with:
+        path: text.txt
+        key: ${{ runner.os }}-text-${{ hashFiles('**/README.md') }}
+
+    - name: Create Text
+      run: echo test >> text.txt
