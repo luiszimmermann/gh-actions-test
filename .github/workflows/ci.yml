@@ -28,7 +28,7 @@ jobs:
         echo test >> test/text.txt
         cd test
         ls
- 
-     - name: Test
+
+    - name: Test
       run: |
         ls
