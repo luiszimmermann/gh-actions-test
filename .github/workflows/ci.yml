@@ -23,7 +23,12 @@ jobs:
         key: ${{ runner.os }}-text-${{ hashFiles('**/README.md') }}
 
     - name: Create Text
-      run: | 
+      run: |
         mkdir -p test
         echo test >> test/text.txt
+        cd test
+        ls
  
+     - name: Test
+      run: |
+        ls
