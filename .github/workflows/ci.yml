@@ -26,3 +26,4 @@ jobs:
       run: | 
         mkdir -p test
         echo test >> test/text.txt
+ 
